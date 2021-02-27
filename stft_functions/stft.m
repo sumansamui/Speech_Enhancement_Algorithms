@@ -1,5 +1,7 @@
 function [spec] = stft(filename, params)
 
+ % Copyright (c) 2015 by Suman Samui
+
 [samples, fs] = audioread(filename);
 Tw = params.FL; % Frame-length in msec 
 Ts = params.FS; %Frame-shift (Hop) in msec
