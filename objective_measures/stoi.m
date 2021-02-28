@@ -29,8 +29,15 @@ function d = stoi(ref_wav, processed_wav)
 
 y = audioread(processed_wav);
 
+
+
 if length(x)~=length(y)
-    error('x and y should have the same length');
+    %error('x and y should have the same length');
+    if length(x)>length(y)
+        x=x(1:length(y));
+    else
+        y=y(1:length(x));
+    end
 end
 
 % initialization
